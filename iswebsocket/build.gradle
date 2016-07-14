@@ -34,9 +34,22 @@ repositories {
 bootRepackage {
     enabled false
 }
+
+def version = [
+	spring: '4.2.5.RELEASE'
+	, mybatis: '3.2.2' //MyBatis 추가
+	, mybatisSpring: '1.2.0' //MyBatis 추가
+	, mysql: '5.1.26' //MyBatis 추가
+]
+
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-websocket")
     compile("org.springframework:spring-messaging")
+    compile("org.mybatis:mybatis:${version.mybatis}")
+    compile("org.mybatis:mybatis-spring:${version.mybatisSpring}")
+  	compile("mysql:mysql-connector-java:${version.mysql}")
+  	compile("org.springframework:spring-jdbc:${version.spring}")
+  	compile("org.springframework:spring-tx:${version.spring}")	
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     compile 'jstl:jstl:1.2'
 }

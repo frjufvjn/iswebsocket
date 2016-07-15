@@ -5,7 +5,7 @@
 3. reference URL : 
   http://www.concretepage.com/spring-4/spring-4-websocket-sockjs-stomp-tomcat-example
 
-      1) connect : 	/iswebsocket/add
+      	1) connect : 	/iswebsocket/add
     	2) subscribe : 	/topic/showResult
     	3) send : 		/calcApp/add
     	
